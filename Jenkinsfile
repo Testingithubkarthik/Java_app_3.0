@@ -49,8 +49,8 @@ pipeline{
                 script{
                    
                     def SonarQubecredentialsId = 'sonarqube-api'
-       //             statiCodeAnalysis(SonarQubecredentialsId)
-       //         }
+                    statiCodeAnalysis(SonarQubecredentialsId)
+                }
        //      }
        // }
        // stage('Quality Gate Status Check : Sonarqube'){
