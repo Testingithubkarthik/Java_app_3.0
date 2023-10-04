@@ -51,11 +51,11 @@ pipeline{
                     def SonarQubecredentialsId = 'sonarqube-api'
                     statiCodeAnalysis(SonarQubecredentialsId)
                 }
-       //      }
-       // }
-       // stage('Quality Gate Status Check : Sonarqube'){
-       //   when { expression {  params.action == 'create' } }
-       //      steps{
+             }
+        }
+        stage('Quality Gate Status Check : Sonarqube'){
+          when { expression {  params.action == 'create' } }
+             steps{
        //         script{
                    
        //             def SonarQubecredentialsId = 'sonarqube-api'
