@@ -72,22 +72,15 @@ pipeline{
                }
             }
         }
-     
-
-    stage('Upload JAR to JFrog') {
+       stage('Upload JAR to JFrog') {
         when { expression { params.action == 'create' } }
-        steps {
-            script {
-                def cell() {
-                    sh './jarpush.py'
+           steps{
+              script{
+                   
+                 sh './jarpush.py'
                 }
-                cell()
             }
         }
-    }
-
-  
-
         stage('Docker Image Build'){
          when { expression {  params.action == 'create' } }
             steps{
